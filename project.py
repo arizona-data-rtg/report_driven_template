@@ -19,12 +19,14 @@ project_report.w_lines ("Always start a subsubsection with some explanation abou
 
 # generate some data
 data_x = np.linspace(0,10,20)
-data_y = np.sin(data_x)
+data_y1 = np.sin(data_x)
+data_y2 = np.cos(data_x)
 
 # plot your data
 fig = plt.figure()
-plt.plot(data_x, data_y)
-plt.title("My Plot based on {} data points".format(len(data_x)))
+plt.plot(data_x, data_y1)
+plt.plot(data_x, data_y2)
+plt.title("My Plots based on {} data points".format(len(data_x)))
 fo_plot = "img/My_Plot.png"
 plt.xlabel("Always label your x-axis: linspace of x values")
 plt.ylabel("Always label your y-axis: sin(x)")
